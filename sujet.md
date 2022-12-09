@@ -11,3 +11,22 @@
 5.  Shortly after the appearance of WebAssembly another paper proposed a mechanized specification of the language using Isabelle. The paper can be consulted here: https://www.cl.cam.ac.uk/~caw77/papers/mechanising-and-verifying-the-webassembly-specification.pdf. This mechanized specification complements the first formalization attempt from the paper. According to the author of this second paper, what are the main advantages of the mechanized specification? Did it help improving the original formal specification of the language? What other artifacts were derived from this mechanized specification? How did the author verify the specification? Does this new specification removes the need for testing?
 
 ## Answers
+
+1. En août 2003 a eu lieu un blackout au nord-est des USA : La cause profonde de la panne a été liée à une variété de facteurs, dont le fait que FirstEnergy n'ait pas élagué les arbres empiétant sur la ligne électrique à haute tension
+- Un bug logiciel dans le système d'alarme d'une salle de contrôle de la FirstEnergy corp.
+- Une fois déclenchée, la condition de course a provoqué le blocage du système d'alarme pendant plus d'une une heure
+- Le serveur de secours est entré en action, mais il n'a pas pu suivre les données non traitées.
+- les avertissements et les alarmes n'ont pas été déclenchés parce que les systèmes avaientluttaient pour traiter les anciennes données.
+- les employés n'ont pas pris de mesures
+- la panne s'est étendue à une vaste région
+
+Le bug est donc global. Panne d'électricité généralisée le 14 août 2003
+- On estime que 10 millions de personnes ont été touchées en Ontario et 45 millions de personnes dans huit états américains.
+
+2. Ce bug est local.
+
+3. Le but est de causer des bugs régulièrement en "cassant" la production de code pour vérifier l'abilité du système à réagir en mettant fin à une instance dans la production de façon aléatoire, ou bien en mettant hors-circuit une région entière ou en créant un retard artificiel, une latence auprès des clients pour voir comment ceux-ci réagissent, s'ils s'aperçoivent d'un changement de qualité, de définition et résolution en pixels. Pour résumer, on créer soi-même le chaos afin de mieux le contrôler par la suite, on anticipe de cette façon et on teste mieux notre système.
+
+4. WebAssembly définit un format de code binaire portable et un format de texte correspondant pour les programmes exécutables ainsi que des interfaces logicielles pour faciliter les interactions entre ces programmes et leur environnement hôte. Rapidité, efficacité et portabilité - Le code WebAssembly peut être exécuté à une vitesse quasi-native sur différentes plates-formes en tirant parti des capacités matérielles communes.
+
+5. Les comportements innatendus sont plus clairs et moins présents.
